@@ -65,7 +65,7 @@ class Prestashop extends Command{
     }
 
     private function makeFileName(){
-        return getcwd() . "/laravel_" . md5(time().uniqid()) . ".zip";
+        return getcwd() . "/prestashop_" . md5(time().uniqid()) . ".zip";
     }
 
     private function extract($zipFile, $directory){
