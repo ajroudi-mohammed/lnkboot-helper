@@ -1,0 +1,19 @@
+#! /usr/bin/env php
+
+<?php
+
+use Acme\AddCommand;
+use Acme\CompleteCommand;
+use Acme\DatabaseAdapter;
+use Acme\Prestashop;
+use Acme\ShowCommand;
+use Symfony\Component\Console\Application;
+
+require 'vendor/autoload.php';
+
+$app = new Application('Lnkboot automated tasks', '1.0');
+
+$app->add(new Prestashop(new GuzzleHttp\Client));
+
+$app->run();
+
